@@ -1,0 +1,11 @@
+*.swp
+*.log
+*.html
+server/node_modules/
+server/backup/
+.DS_Store
+users.db
+admin.coffee
+mail.coffee
+static/css/lonelord.css
+static/js/lonelord.min.js

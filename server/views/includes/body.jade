@@ -1,0 +1,63 @@
+#castle
+    #scroll
+        #copyright
+            a(href="http://en.wikipedia.org/wiki/Copyright", target="_blank") (c)
+            &nbsp;
+            a(href="http://vk.com/avbelyy", target="_blank") tohnann,
+            &nbsp;
+            a(href="http://en.wikipedia.org/wiki/MMXIII", target="_blank") mmxiii
+        #content
+            #links
+                a(href="/wiki", target="_blank") wiki
+                |  | 
+                a(href="http://groups.google.com/forum/#!forum/lonelord", target="_blank") forum
+            #header
+                | Lone lord
+            #show_left.arrow
+            #map
+              - for (var i = 0; i < 8; i++) {
+                    .tile
+                        .object
+                            .ppl
+                            .name
+                            .lvl
+                            .id
+              - }
+            #show_right.arrow
+            #console
+                #log
+                    #tabs
+                        span#tab1.tab.active Console
+                        |  | 
+                        span#tab2.tab Chat
+                        |  | 
+                        span#tab3.tab Log
+                    #t1.text
+                    #t2.text
+                    #t3.text
+                #left.bracket {
+                #input
+                    input(placeholder="type a JSON request in without braces")
+                #right.bracket }
+#greeting
+    span(style="color: green")
+        | Welcome to <b>Lone lord</b>, 1-dimensional strategy game controlled by console commands!
+        br
+        | We know - it's not easy to play, even hard, but, like in chess,
+        | as soon as you get on with rules, the game becomes much more fun for you.
+    br
+    | To create an account, type: <b>$register: { email:</b><i> your_email </i><b>, login:</b><i> your_login </i><b>, password:</b><i> your_password </i><b>}</b>.
+    br
+    | To learn how to play, visit <a href="/wiki" target="_blank">wiki</a>.
+#confirmation
+    span(style="color: green")
+        | An email with a confirmation link was sent to you.
+    br
+    | You know what to do with it.
+#first_day
+    span(style="color: green")
+        | Congratulations on your first castle!
+    br
+    | If you are not sure what to do next, read <a href="/wiki/index.php/Your_First_Day" target="_blank">this guide</a>
+#refresh
+    | Connection with the server was lost. Try to refresh the page.

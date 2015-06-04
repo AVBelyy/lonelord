@@ -1,0 +1,44 @@
+— Fuel ~ d^n (n > 1, d – distance in blocks)
+— Resources:
+    * unmanned: money (building, hiring), fuel (trespassing)
+    * manned: wood (building), diamonds (building castles)
+— Buildings: towers, castles, marketsquares (2 towers + 3 castles)
+    * able to be enhanced using respective materials
+— Ability to name specific clusters.
+
+— Command syntax very similar to MongoDB:
+    {$attack: {from: 410, to: 2, qty: 1000}, $show: 32}
+
+- If owner doesn't appear online in the game for a month, his castles/towers/markets are sold out with all the soldiers by their initial cost
+  If nobody buys them in a month, they'll be demolished
+
+- Wood & Diamonds:
+    * Resources, when harvested, are delivered to the nearest tower/castle
+    * Fuel is consumed when sending troop to the mine/forest
+    * Harvesting/sending process continues infinitely, as long as tower or castle has enough fuel
+    * Market costs (cur_num_of_markets + 1) diamonds and sth else
+    * There will be 50000 diamonds in the game
+    * Mine:
+        - Diamond is given every 24/log(C+1) hours to a random person, according to everyone's luck,
+          which is calculated as log10(x+1) (where x - size of one's troop, C - sum of all troop's sizes)
+    * Forest:
+        - Wood is given every hour in 1000 units according to every troop's share and size of troop (every soldier - 1 wood, like that)
+        - There will be 5-10 million wood in each forest
+
+- Areas in which stands castle or tower:
+    * Forests: better forests (x1-2 (depends on proximity to center))
+    * Riverbank: better trading (/1-2 (depends on proximity to center))
+    * Planes: better attack and defense (x1-2 (depends on proximity to center/outrim, respectively))
+
+- Flags above castle gates for all clique members (20 diamonds from treasury + 2 diamond from each member) - 207x33 px
+
+- Level:
+    * every odd: increases durability by 1
+    * every even: increases attack power by 1
+    * every third: multiplies weight-per-man by 2
+
+- Every adjacent to a castle tower sends some random percentage of its soldiers when the castle is under attack
+
+- For 50 diamonds player not only receives a market, but also a right to be clique-owner
+
+- Only clique-owners can send resources to other cliques (technically, they are all in a clique "bourgeoisie"

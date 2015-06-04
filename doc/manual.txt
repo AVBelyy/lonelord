@@ -1,0 +1,41 @@
+— At the beginning everyone posseses:
+    * 1000 money
+    * 1000 fuel
+    * 1000 wood
+    * 1 diamond
+— Units serve as workers, warriors, traders and, more generally, item-bearers.
+  Moving units to places always costs some amount of fuel.
+  
+  Trespassing:
+    One can only trespass upon buildings of communities (s)he belongs to.
+
+  Building:
+    Out of a selected castle group of workers, of size depending on amount of resources
+    required to erect a building, is sent to whatever place player has chosen. The
+    calculated fuel size, depending on a building remoteness and size of workers group, is
+    substracted from selected castle's fuel. After constructing a building, group of workers
+    remains inside, if the building is a tower or a castle, or, if the building is a
+    marketsquare, returns home without charging fuel.
+
+  Attacking:
+    For clearance, suppose that the attacking group of warriors is called "attackers" and the
+    group of warriors which faces the attack in either castle or tower is "defenders".
+    The attacking force is calculated as the product of number of attackers and the durability
+    of a building whence the attackers came. The defending force is calculated likewise.
+    Either forces are as well multiplied by some different random luck coefficients, which lie
+    within 0.88 and 1.3.
+    After the attack is performed, three results are possible:
+        1) All defenders dead. Attackers' victory.
+            If the building that was being defended is a tower, it's destroyed and the remaining
+            attackers march home without charging fuel.
+            If it is a castle, the remaining attackers take possession over it.
+            If it is a marketsquare, it is impossible — marketsquares cannot be attacked.
+        2) All attackers and all defenders dead. Draw.
+        and
+        3) All attackers dead. Defenders' victory.
+            The building remains being in possession of defending player.
+
+  Trading:
+    Trading happens on marketsquares, which always belong to a player. However, there is
+    a council marketsquare in the zeroth cluster of the country. All player-owned
+    marketsquares charge 5% tax for every deal.

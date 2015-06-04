@@ -1,0 +1,1 @@
+It's now possible to save up to 50% fuel by using <i>optimize</i> option in $transfer command! See <a href='/wiki/index.php/API#.24transfer_.28U.2BB.29' target='_blank'>more</a> | We have a <a href='https://groups.google.com/forum/#!forum/lonelord' target='_blank'>Google Group</a>, where you can post your questions

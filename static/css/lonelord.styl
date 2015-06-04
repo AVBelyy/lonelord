@@ -1,0 +1,311 @@
+@font-face
+    font-family "TitleFont"
+    src url(title.otf)
+
+@font-face
+    font-family "ConsoleFont"
+    src url(CelticGaramond.otf)
+
+
+html, body, #castle
+    margin 0
+    height 100%
+
+#castle
+    position relative
+
+#scroll
+    position absolute
+
+#content
+    position absolute
+
+#links
+    position absolute
+    z-index 1
+    right 20%
+    font-family "Orbitron"
+
+    a
+        color #77542f
+
+#header
+    position absolute
+    left 25%
+    width 50%
+    height 13.75%
+    padding-top 1%
+    font-family "TitleFont"
+    color #7b532a
+    text-align center
+    vertical-align bottom
+
+#map
+    position absolute
+    top 22.5%
+    width 100%
+    border none
+    background-size cover
+
+.tile
+    position relative
+    display inline-block
+    height 100%
+    width 12.5%
+    background-size cover
+
+.swamp
+    background-image url(../img/textures/swamp.jpg)
+
+.plain
+    background-image url(../img/textures/plain.jpg)
+
+.desert
+    background-image url(../img/textures/desert.jpg)
+
+.tile.desert
+    .id
+        color black
+
+.object
+    position absolute
+    width 85%
+    height 85%
+    background-size cover
+    cursor pointer
+
+.tower
+    background-image url(../img/textures/tower.gif)
+
+.castle
+    background-image url(../img/textures/castle.gif)
+
+.market
+    background-image url(../img/textures/market.gif)
+
+.forum
+    background-image url(../img/textures/forum.gif)
+
+.g1
+    background-image url(../img/textures/g1.gif)
+
+.g2
+    background-image url(../img/textures/g2.gif)
+    
+.g3
+    background-image url(../img/textures/g3.gif)
+    
+.g4
+    background-image url(../img/textures/g4.gif)
+    
+.ppl
+    position absolute
+    display none
+    top -32%
+    width 100%
+    height 10%
+    font-family "Orbitron"
+    line-height 100%
+    text-align center
+
+.castle-ppl, .tower-ppl, .market-ppl
+.forum-ppl, .mine-ppl, .tree-ppl, .farm-ppl
+    display block
+
+.shared
+    color: #0d7bfb
+
+.thy
+    font-weight: 700
+
+.lvl
+    position absolute
+    display none
+    width 100%
+    height 14%
+    line-height 100%
+    font-family "Orbitron"
+    text-align center
+    color white
+
+.castle-lvl
+    display block
+    bottom 7%
+
+.tower-lvl
+    bottom 10%
+    left -1%
+    display block
+
+.id
+    position absolute
+    width 100%
+    bottom -12%
+    height 10%
+    font-family "Orbitron"
+    line-height 100%
+    font-size 10px
+    text-align center
+    color white
+
+.name
+    position absolute
+    overflow hidden
+    display none
+    line-height 100%
+    text-align center
+    font-family "Orbitron"
+    
+.tower-name    
+.castle-name
+    display block
+    left 10%
+    top 62%
+    width 81%
+    height 11%
+    background red
+    
+.market-name
+.forum-name
+    display block
+    top 36%
+    left 12%
+    width 80%
+    height 17%
+
+.tree
+    background-image url(../img/textures/tree.gif)
+
+.mine
+    background-image url(../img/textures/mine.jpg)
+
+#console
+    position absolute
+    width 100%
+    height 56.25%
+    border-top none
+
+#log
+    position absolute
+    top 5%
+    left 1.23%
+    width 97.54%
+    height 72%
+    font-family "ConsoleFont"
+
+    p
+        margin 0
+        color #586e75
+
+    p.error
+        color red
+        margin-bottom 1.5%
+
+    p.chat
+        margin-top 0.5%
+        margin-bottom 0.5%
+        color #073642
+
+    p.log
+        margin-bottom 0.5%
+        color #073642
+
+    p.thy_log
+        font-style italic
+
+    p.request:before
+        content "> "
+
+    p.response
+        margin-bottom 1.5%
+
+    p.response:before
+        content "< "
+
+    span.command
+        color #cb4b16
+        font-weight bold
+
+    span.param
+        color #073642
+
+    span.quoted:before
+        content: '"'
+
+    span.quoted
+        color #268bd2
+
+    span.quoted:after
+        content: '"'
+
+    span.number
+        color #2aa198
+
+    span.constant
+        color #859900
+
+    span.ok
+        color green
+
+    span.error
+        color red
+
+#tabs
+    position absolute
+    height 10%
+    width 100%
+    font-family "Orbitron"
+
+.tab
+    text-decoration underline
+    cursor pointer
+
+.active
+    font-weight 700
+    text-decoration none
+    cursor auto
+
+.attention
+    color red
+
+.text
+    position absolute
+    width 100%
+    height 86%
+    overflow auto
+
+#t2
+#t3
+    display none
+
+#t3
+    height 113%
+
+#input
+    position absolute
+    left 1.23%
+    bottom 4%
+    width 97.54%
+    height 15%
+    background #ffd3a1
+
+    >input
+        position absolute
+        box-sizing border-box
+        width 100%
+        height 100%
+        border none
+        outline none
+        background none
+        font-family "ConsoleFont"
+        font-size 24px
+
+    >input:focus
+        outline 2px solid #77542f
+        outline-offset 1px
+
+#greeting
+#confirmation
+#first_day
+#refresh
+    display none

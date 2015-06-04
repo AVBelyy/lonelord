@@ -7,7 +7,7 @@ server = engine.listen 2511
 logins = {}
 windows = {}
 news = fs.readFileSync("motd.txt", "utf8")
-db = server.get_db()
+db = module.parent.exports.get_db()
 
 exports.is_client = (login) -> windows[login] > 0
 
